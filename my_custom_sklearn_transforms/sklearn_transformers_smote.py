@@ -28,8 +28,8 @@ class Smote(BaseEstimator, TransformerMixin):
 
     def fit_transform(self, X, y):
        
-        X_array  = np.ravel(X)
-        y_array = np.ravel(y)
+        X_array  = [np.ravel(X)]
+        y_array = [np.ravel(y)]
         
         self.fit(X_array, y_array)
 
