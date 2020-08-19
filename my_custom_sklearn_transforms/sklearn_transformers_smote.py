@@ -30,5 +30,5 @@ class Smote(BaseEstimator, TransformerMixin):
     #     # self.fit(X, y)
     #     return self.smote.fit_resample(X, y)
 
-    def transform(self, X):
+    def transform(self, X, y):
         return self.smote.fit_resample(X, y)
