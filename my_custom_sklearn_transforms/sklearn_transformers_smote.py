@@ -1,3 +1,4 @@
+from sklearn.base import BaseEstimator, TransformerMixin
 from imblearn.over_sampling import SMOTE, ADASYN
 
 class Smote(BaseEstimator, TransformerMixin):
