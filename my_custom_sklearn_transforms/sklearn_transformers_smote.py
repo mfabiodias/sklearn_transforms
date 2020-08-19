@@ -5,10 +5,10 @@ class Smote(BaseEstimator, TransformerMixin):
     def __init__(self, X, y):
         self.smote = SMOTE()
 
-    def fit(self, X, y, sample_weight=None):
+    def fit(self, X, y):
         return self
 
-    def transform(self, X, y):
+    def transform(self, X, y, sample_weight=None):
         # data = X.copy()
         # targets = y.copy()
         # data, targets = self.smote.fit_resample(X, y)
