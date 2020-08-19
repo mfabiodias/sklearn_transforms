@@ -5,7 +5,7 @@ class Smote(BaseEstimator, TransformerMixin):
     def __init__(self):
            self.smote = SMOTE(SMOTE(kind='regular', n_jobs=-1))
 
-    def fit(self, X, y=None):
+    def fit(self, X, y):
            return self
 
     def transform(self, X, y):
