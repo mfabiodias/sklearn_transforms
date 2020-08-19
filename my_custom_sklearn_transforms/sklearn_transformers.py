@@ -15,8 +15,8 @@ class DropColumns(BaseEstimator, TransformerMixin):
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
 
-class MySmote(BaseEstimator, TransformerMixin):
-    def init(self):
+class Smote(BaseEstimator, TransformerMixin):
+    def __init__(self):
            self.smote = SMOTE(SMOTE(kind='regular', n_jobs=-1))
 
     def fit(self, X, y=None):
