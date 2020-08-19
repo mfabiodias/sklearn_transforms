@@ -15,14 +15,14 @@ from imblearn.over_sampling import SMOTE, ADASYN
 #         return data, targets
 
 class Smote(BaseEstimator, TransformerMixin):
-    def fit(self, X, y=None):
+    def fit(self, X, y):
         print(X.shape, ' ', type(X)) # (57, 28)   <class 'numpy.ndarray'>
         print(len(y), ' ', type)     #    57      <class 'list'>
         self.smote = SMOTE()
 
         return self
 
-    def fit_transform(self, X, y=None):
+    def fit_transform(self, X, y):
         self.fit(X, y)
         return self.smote.fit_resample(X, y)
 
