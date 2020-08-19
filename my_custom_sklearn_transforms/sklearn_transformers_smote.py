@@ -30,11 +30,12 @@ class Smote(BaseEstimator, TransformerMixin):
        
         y = np.ravel(y)
         
-        # self.fit(X_array, y_array)
 
         print(len(X), ' - X - ', X)
         print(len(y), ' - y - ', y)
-        return self.fit_resample(X_array, y_array)
+        
+        self.fit(X, y)
+        return self.smote.fit_resample(X_array, y_array)
 
     def transform(self, X):
         return X
