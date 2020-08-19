@@ -14,7 +14,7 @@ from imblearn.over_sampling import SMOTE, ADASYN
 #         data, targets = self.smote.fit_resample(data, targets)
 #         return data, targets
 
-class smote(BaseEstimator, TransformerMixin):
+class Smote(BaseEstimator, TransformerMixin):
     def fit(self, X, y=None):
         print(X.shape, ' ', type(X)) # (57, 28)   <class 'numpy.ndarray'>
         print(len(y), ' ', type)     #    57      <class 'list'>
