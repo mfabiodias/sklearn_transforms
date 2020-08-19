@@ -1,6 +1,10 @@
 from sklearn.base import BaseEstimator, TransformerMixin
 from imblearn.over_sampling import SMOTE, ADASYN
 
+import numpy as np
+
+
+
 # class Smote(BaseEstimator, TransformerMixin):
 #     def __init__(self):
 #         self.smote = SMOTE()
@@ -23,8 +27,15 @@ class Smote(BaseEstimator, TransformerMixin):
         return self
 
     def fit_transform(self, X, y):
-        # self.fit(X, y)
-        return self.smote.fit_resample(X, y)
+       
+        X_array  = np.ravel(X)
+        y_array = np.ravel(y)
+        
+        self.fit(X_array, y_array)
+
+        print(len(X_array), ' - X_array - ', X_array)
+        print(len(yarray), ' - yarray - ', yarray)
+        return self.smote.fit_resample(X_array, y_array)
 
     def transform(self, X):
         return X
