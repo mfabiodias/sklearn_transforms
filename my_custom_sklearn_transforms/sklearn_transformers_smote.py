@@ -3,7 +3,7 @@ from imblearn.over_sampling import SMOTE, ADASYN
 
 class Smote(BaseEstimator, TransformerMixin):
     def __init__(self):
-           self.smote = SMOTE(SMOTE(kind='regular', n_jobs=-1))
+           self.smote = SMOTE()
 
     def fit(self, X, y):
            return self
